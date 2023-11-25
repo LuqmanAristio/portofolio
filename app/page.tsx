@@ -22,7 +22,7 @@ export default function Home() {
         <nav className="flex items-center justify-between p-8 lg:px-32 md:px-12 sm:6" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <h3 className="tracking-wide font-extrabold italic text-gray-800 text-3xl space-x-8">Ur <span className='text-light-blue'>Friendly</span> Engineer</h3>
+              <h3 className="tracking-wide font-extrabold text-gray-800 text-3xl space-x-8">Ur <span className='text-light-blue'>Friendly</span> Engineer</h3>
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -91,23 +91,21 @@ export default function Home() {
           <div className='flex justify-center h-full flex-col'>
             <h3 className='font-semibold text-5xl'>Hello I’m</h3>
             <h1 className='font-extrabold text-7xl text-light-blue my-8'>Luqman Aristio</h1>
-            {/* <h4 className='font-semibold text-3xl'>Im a Software and Machine Learning Engineer</h4> */}
             <TypingEffect></TypingEffect>
             <p className='text-lg my-6'>I'm an engineer who love to crafts innovative solutions to tackle technological challenges. 
               I believe that in an increasingly connected world, code is the language that empowers us to shape the future</p>
             <div>
-              <button className='px-12 py-3 bg-dark-blue text-white font-medium rounded hover:bg-[#106168]'>My Project</button>
+              <button className='px-12 py-3 bg-dark-blue text-white font-medium border-2 border-dark-blue rounded hover:bg-[#106168]'>My Project</button>
               <button className='px-14 ml-5 py-3 font-medium rounded border-2 border-slate-500 text-slate-800'>Contact</button>
             </div>
           </div>
         </div>
         <div className='w-3/6 h-full relative'>
-          <div className='absolute bottom-0 w-full'>
+          <div className='absolute bottom-0 right-0 transform translate-x-1/4 w-full'>
             <Image
               src={profilePic}
-              width={1000}
-              height={1000}
               alt="Picture of the author"
+              className='w-3/5 h-full'
             />
           </div>
           <div className="w-full h-full flex items-center frame">
