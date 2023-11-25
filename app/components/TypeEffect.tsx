@@ -43,7 +43,7 @@ const TypingEffect: React.FC = () => {
   }, []);
 
   return (
-    <h1 className="font-semibold text-3xl text-slate-900 relative">
+    <h1 className="font-semibold text-2xl text-slate-900 relative">
       {" "}
       <span ref={dynamicTextRef} className="text-slate-900 relative"></span>
       <span ref={lineEffectRef} className="ml-1 text-slate-900 relative before:content-['|'] before:w-1 before:h-5 before:absolute before:animate-blink before:-ml-1 before:transition-all before:duration-500 before:ease-in-out"></span>
