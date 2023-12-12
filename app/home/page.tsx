@@ -105,11 +105,11 @@ export default function Home() {
               alt="Circle"
               className='object-contain'
             />
-            <Image
+            {/* <Image
               src={profilePic}
               alt="Picture of the author"
               className='absolute bottom-0 w-3/4'
-            />
+            /> */}
         </div>
       </div>
     </div>

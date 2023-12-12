@@ -9,14 +9,14 @@ import FlyNav from '../components/FlyNav'
 export default function About() {
 
   return (
-    <div className="bg-[#13919B] h-screen flex items-center">
+    <div className="bg-gradient-to-r from-purple-600 to-cyan-400 bg-anim-gradient h-screen flex items-center">
         <FlyNav></FlyNav>
         <div className='flex items-center justify-between mx-auto py-32 w-3/4 h-full'>
             <div className='w-3/5 mr-10'>
                 <h1 className='text-right text-[#64E9EE] text-8xl font-extrabold'>About Me</h1>
                 <p className='text-right text-white text-2xl pl-32 my-10'>A final-year computer science student at Udayana University, Indonesia.  
-                    Actively engaged in my regular coursework and concurrently exploring 
-                    opportunities in the job market with the skills I have acquired. </p>
+                    Passionate in solving problems by utilizing the latest technology.
+                    Currently working on thesis. I'm also an enthusiast cat lover. Nice to know you!</p>
                 <div className='flex justify-end gap-x-10'>
                     <a
                         href="https://github.com/LuqmanAristio"

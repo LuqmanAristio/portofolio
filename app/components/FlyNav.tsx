@@ -1,10 +1,11 @@
 "use client"
 
-import Image from "next/image"
-import iconplan from "../../public/image/blueprint.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+
 import {
   faXmark,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -16,9 +17,16 @@ import {
 
 export default function FlyNav() {
 
+  const[menuClick, setMenu]=useState(true);
+
+  const handleClick = () => {
+    setMenu(!menuClick);
+  };
+
   return (
-    <div className="h-screen w-fit absolute z-[100] flex items-center">
-        <div className="ml-36 h-4/5 rounded-lg w-full bg-[#093A3E] py-10 px-7 flex justify-between items-center flex-col">
+    <div className="h-[40vw] w-fit absolute z-[100] flex items-center">
+        <div className={`ml-36 h-${menuClick?'20':'full'} transition-height duration-300 ease-in-out rounded-lg w-full bg-[#093A3E] py-10 px-7 flex justify-${menuClick?'center':'between'} items-center flex-col`}>
+
             <a
                 href="#"
                 target="_blank"
@@ -26,7 +34,7 @@ export default function FlyNav() {
             >
                 <FontAwesomeIcon
                     icon={faUser}
-                    className="text-white font-semibold text-4xl"
+                    className={`text-white font-semibold ${menuClick?'hidden':''} text-4xl cursor-pointer`}
                 />
             </a>
 
@@ -37,20 +45,23 @@ export default function FlyNav() {
             >
                 <FontAwesomeIcon
                     icon={faFileCode}
-                    className="text-white font-semibold text-4xl"
+                    className={`text-white font-semibold ${menuClick?'hidden':''} text-4xl cursor-pointer`}
                 />
             </a>
 
-            <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            {menuClick ? (
+                <FontAwesomeIcon
+                    icon={faBars}
+                    className="text-white font-semibold text-4xl cursor-pointer transition-transform duration-300 ease-in-out transform"
+                    onClick={handleClick}
+                />
+                ) : (
                 <FontAwesomeIcon
                     icon={faXmark}
-                    className="text-white font-semibold text-4xl"
+                    className="text-white font-semibold text-4xl cursor-pointer transition-transform duration-300 ease-in-out transform rotate-90"
+                    onClick={handleClick}
                 />
-            </a>
+            )}
 
             <a
                 href="#"
@@ -59,7 +70,7 @@ export default function FlyNav() {
             >
                 <FontAwesomeIcon
                     icon={faFileLines}
-                    className="text-white font-semibold text-4xl"
+                    className={`text-white font-semibold ${menuClick?'hidden':''} text-4xl cursor-pointer`}
                 />
             </a>
 
@@ -70,57 +81,9 @@ export default function FlyNav() {
             >
                 <FontAwesomeIcon
                     icon={faPaperPlane}
-                    className="text-white font-semibold text-4xl"
+                    className={`text-white font-semibold ${menuClick?'hidden':''} text-4xl cursor-pointer`}
                 />
             </a>
-
-            {/* <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <Image
-                    src={iconhome}
-                    alt="Instagram"
-                    className='w-12'
-                />
-            </a>
-
-            <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <Image
-                    src={iconx}
-                    alt="Instagram"
-                    className='w-12'
-                />
-            </a>
-
-            <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <Image
-                    src={iconnote}
-                    alt="Instagram"
-                    className='w-12'
-                />
-            </a>
-
-            <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <Image
-                    src={iconcall}
-                    alt="Instagram"
-                    className='w-12'
-                />
-            </a> */}
         </div>
     </div>
   )

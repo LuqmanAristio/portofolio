@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 const TypingEffect: React.FC = () => {
   const dynamicTextRef = useRef<HTMLSpanElement>(null);
   const lineEffectRef = useRef<HTMLSpanElement>(null);
-  const words = ["Passionate Software and Machine Learning Engineer", "a Final Year Informatic Student at Udayana University"];
+  const words = ["Passionate Software and Machine Learning Engineer", "a Final Year Informatic Student at Udayana University", "I Love Cat"];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
@@ -22,7 +22,7 @@ const TypingEffect: React.FC = () => {
 
     if (!isDeleting && charIndex < currentWord.length) {
       charIndex++;
-      setTimeout(typeEffect, 100); // Memperlambat kecepatan ketik
+      setTimeout(typeEffect, 100);
     } else if (isDeleting && charIndex > 0) {
       charIndex--;
       setTimeout(typeEffect, 100); // Memperlambat kecepatan penghapusan
