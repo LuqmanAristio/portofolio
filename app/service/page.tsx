@@ -3,7 +3,6 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
-import { useWindowSize } from 'react-use';
 import FlyNav from "../components/FlyNav";
 import mobiledev from "../../public/image/mobiledevelopment.jpg";
 import uidesign from "../../public/image/ui design.png";
@@ -12,8 +11,6 @@ import webdev from "../../public/image/webdevelopment.jpg";
 import Image from 'next/image';
 
 export default function Service () {
-
-    const { height, width } = useWindowSize();
 
     const particlesInit = useCallback(async (engine: Engine) => {
         console.log(engine);
@@ -26,7 +23,7 @@ export default function Service () {
 
 
     return(
-        <div className="h-screen relative w-screen flex items-center">
+        <div className="h-screen relative flex items-center">
             <FlyNav></FlyNav>
             <Particles className="h-screen absolute"
                         id="tsparticles"
@@ -106,7 +103,7 @@ export default function Service () {
                         detectRetina: true,
                     }}
                 />
-                <div className="absolute flex items-center justify-center flex-col w-screen h-full">
+                <div className="absolute flex items-center justify-center flex-col w-full h-full">
                     <h1 className="tracking-wider text-7xl text-[#444444] font-extrabold">Service</h1>
                     <p className="text-2xl mt-5 font-medium text-[#423F3E]">These are some of the areas I am currently interested in</p>
 

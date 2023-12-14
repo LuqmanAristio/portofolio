@@ -45,3 +45,13 @@ body {
       animation: gradient 25s ease infinite;
 }
 
+.custom-shadow {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Add this style to your CSS */
+.focused {
+  transform: translateY(-1.75em); /* Adjust the value based on your preference */
+  font-size: 0.9em; /* Optionally adjust the font size */
+  color: #175F65;
+}
